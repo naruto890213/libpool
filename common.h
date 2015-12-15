@@ -20,7 +20,7 @@
 #define MAX_LINE 16384
 #define ITEM_SLABBED 4
 
-#define THREAD_NUM 4//add by 20151214
+#define THREAD_NUM 10//add by 20151214
 
 /** Maximum length of a key. */
 #define KEY_MAX_LENGTH 250
