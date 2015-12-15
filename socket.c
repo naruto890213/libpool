@@ -466,7 +466,7 @@ static void drive_machine(conn *c)
 				conn_set_state(c, conn_mwrite);
 				break;
 			case conn_nread:
-				printf("this come from %s:%s->%d, conn_nread\n", __FILE__, __func__, __LINE__);
+				printf("this come from %s:%s->%d, conn_nread111111111\n", __FILE__, __func__, __LINE__);
 				if(c->rlbytes == 0)
 				{
 					break;
