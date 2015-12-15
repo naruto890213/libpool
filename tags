@@ -1,0 +1,242 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CQ	common.h	/^typedef struct conn_queue CQ;$/;"	t	typeref:struct:conn_queue
+CQ_ITEM	common.h	/^typedef struct conn_queue_item CQ_ITEM;$/;"	t	typeref:struct:conn_queue_item
+DATA_BUFFER_SIZE	common.h	29;"	d
+INCR_MAX_STORAGE_LEN	common.h	27;"	d
+IOV_LIST_HIGHWAT	common.h	53;"	d
+IOV_LIST_INITIAL	common.h	45;"	d
+IOV_MAX	socket.c	13;"	d	file:
+ITEMS_PER_ALLOC	thread.c	4;"	d	file:
+ITEM_LIST_HIGHWAT	common.h	52;"	d
+ITEM_LIST_INITIAL	common.h	39;"	d
+ITEM_SLABBED	common.h	21;"	d
+ITEM_data	common.h	289;"	d
+ITEM_key	common.h	283;"	d
+ITEM_suffix	common.h	286;"	d
+KEY_MAX_LENGTH	common.h	24;"	d
+LIBEVENT_DISPATCHER_THREAD	common.h	/^}LIBEVENT_DISPATCHER_THREAD;$/;"	t	typeref:struct:__anon5
+LIBEVENT_THREAD	common.h	/^} LIBEVENT_THREAD;$/;"	t	typeref:struct:__anon4
+MAX_FD	common.h	55;"	d
+MAX_LINE	common.h	20;"	d
+MAX_SENDBUF_SIZE	common.h	33;"	d
+MSG_LIST_HIGHWAT	common.h	54;"	d
+MSG_LIST_INITIAL	common.h	48;"	d
+READ_BUFFER_HIGHWAT	common.h	51;"	d
+READ_DATA_RECEIVED	common.h	/^    READ_DATA_RECEIVED,$/;"	e	enum:try_read_result
+READ_ERROR	common.h	/^    READ_ERROR,            \/** an error occurred (on the socket) (or client closed connection) *\/$/;"	e	enum:try_read_result
+READ_MEMORY_ERROR	common.h	/^    READ_MEMORY_ERROR      \/** failed to allocate more memory *\/$/;"	e	enum:try_read_result
+READ_NO_DATA_RECEIVED	common.h	/^    READ_NO_DATA_RECEIVED,$/;"	e	enum:try_read_result
+SUFFIX_LIST_INITIAL	common.h	42;"	d
+SUFFIX_SIZE	common.h	36;"	d
+TRANSMIT_COMPLETE	socket.c	/^    TRANSMIT_COMPLETE,   \/** All done writing. *\/$/;"	e	enum:transmit_result	file:
+TRANSMIT_HARD_ERROR	socket.c	/^    TRANSMIT_HARD_ERROR  \/** Can't write (c->state is set to conn_closing) *\/$/;"	e	enum:transmit_result	file:
+TRANSMIT_INCOMPLETE	socket.c	/^    TRANSMIT_INCOMPLETE, \/** More data remaining to write. *\/$/;"	e	enum:transmit_result	file:
+TRANSMIT_SOFT_ERROR	socket.c	/^    TRANSMIT_SOFT_ERROR, \/** Can't write any more right now. *\/$/;"	e	enum:transmit_result	file:
+UDP_HEADER_SIZE	common.h	32;"	d
+UDP_MAX_PAYLOAD_SIZE	common.h	31;"	d
+UDP_READ_BUFFER_SIZE	common.h	30;"	d
+__COMMON_H__	common.h	2;"	d
+_stritem	common.h	/^typedef struct _stritem {$/;"	s
+add_iov	socket.c	/^static int add_iov(conn *c, const void *buf, int len)$/;"	f	file:
+add_msghdr	socket.c	/^static int add_msghdr(conn *c)$/;"	f	file:
+atomics_mutex	thread.c	/^pthread_mutex_t atomics_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+auth_cmds	common.h	/^    uint64_t          auth_cmds;$/;"	m	struct:thread_stats
+auth_errors	common.h	/^    uint64_t          auth_errors;$/;"	m	struct:thread_stats
+authenticated	common.h	/^    bool authenticated;$/;"	m	struct:conn
+base	common.h	/^	struct event_base *base;$/;"	m	struct:__anon5	typeref:struct:__anon5::event_base
+base	common.h	/^    struct event_base *base;    \/* libevent handle this thread uses *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::event_base
+bin_no_state	common.h	/^    bin_no_state,$/;"	e	enum:bin_substates
+bin_read_flush_exptime	common.h	/^    bin_read_flush_exptime,$/;"	e	enum:bin_substates
+bin_read_set_value	common.h	/^    bin_read_set_value,$/;"	e	enum:bin_substates
+bin_reading_cas_header	common.h	/^    bin_reading_cas_header,$/;"	e	enum:bin_substates
+bin_reading_del_header	common.h	/^    bin_reading_del_header,$/;"	e	enum:bin_substates
+bin_reading_get_key	common.h	/^    bin_reading_get_key,$/;"	e	enum:bin_substates
+bin_reading_incr_header	common.h	/^    bin_reading_incr_header,$/;"	e	enum:bin_substates
+bin_reading_sasl_auth	common.h	/^    bin_reading_sasl_auth,$/;"	e	enum:bin_substates
+bin_reading_sasl_auth_data	common.h	/^    bin_reading_sasl_auth_data,$/;"	e	enum:bin_substates
+bin_reading_set_header	common.h	/^    bin_reading_set_header,$/;"	e	enum:bin_substates
+bin_reading_stat	common.h	/^    bin_reading_stat,$/;"	e	enum:bin_substates
+bin_reading_touch_key	common.h	/^    bin_reading_touch_key,$/;"	e	enum:bin_substates
+bin_substates	common.h	/^enum bin_substates {$/;"	g
+binary_header	common.h	/^    protocol_binary_request_header binary_header;$/;"	m	struct:conn
+bodylen	common.h	/^        uint32_t bodylen;$/;"	m	struct:__anon2::__anon3
+bool	common.h	/^typedef int			bool;$/;"	t
+buffer	common.h	/^        char *buffer;$/;"	m	struct:conn::__anon6
+bytes	common.h	/^    uint8_t bytes[24];$/;"	m	union:__anon2
+bytes_read	common.h	/^    uint64_t          bytes_read;$/;"	m	struct:thread_stats
+bytes_written	common.h	/^    uint64_t          bytes_written;$/;"	m	struct:thread_stats
+cas	common.h	/^        uint64_t cas;$/;"	m	struct:__anon2::__anon3
+cas	common.h	/^        uint64_t cas;$/;"	m	union:_stritem::__anon1
+cas	common.h	/^    uint64_t cas; \/* the cas to return *\/$/;"	m	struct:conn
+cas_misses	common.h	/^    uint64_t          cas_misses;$/;"	m	struct:thread_stats
+cmd	common.h	/^    short cmd; \/* current command being processed *\/$/;"	m	struct:conn
+conn	common.h	/^struct conn {$/;"	s
+conn	common.h	/^typedef struct conn conn;$/;"	t	typeref:struct:conn
+conn_close	socket.c	/^static void conn_close(conn *c)$/;"	f	file:
+conn_closed	common.h	/^    conn_closed,     \/**< connection is closed *\/$/;"	e	enum:conn_states
+conn_closing	common.h	/^    conn_closing,    \/**< closing this connection *\/$/;"	e	enum:conn_states
+conn_free	socket.c	/^void conn_free(conn *c)$/;"	f
+conn_init	socket.c	/^void conn_init(void)$/;"	f
+conn_listening	common.h	/^    conn_listening,  \/**< the socket which listens for connections *\/$/;"	e	enum:conn_states
+conn_max_state	common.h	/^    conn_max_state   \/**< Max state value (used for assertion) *\/$/;"	e	enum:conn_states
+conn_mwrite	common.h	/^    conn_mwrite,     \/**< writing out many items sequentially *\/$/;"	e	enum:conn_states
+conn_new	socket.c	/^conn *conn_new(const int sfd, int init_state, const int event_flags, const int read_buffer_size, struct event_base *base)$/;"	f
+conn_new_cmd	common.h	/^    conn_new_cmd,    \/**< Prepare connection for next command *\/$/;"	e	enum:conn_states
+conn_nread	common.h	/^    conn_nread,      \/**< reading in a fixed number of bytes *\/$/;"	e	enum:conn_states
+conn_parse_cmd	common.h	/^    conn_parse_cmd,  \/**< try to parse a command from the input buffer *\/$/;"	e	enum:conn_states
+conn_queue	common.h	/^struct conn_queue {$/;"	s
+conn_queue_item	common.h	/^struct conn_queue_item {$/;"	s
+conn_read	common.h	/^    conn_read,       \/**< reading in a command line *\/$/;"	e	enum:conn_states
+conn_release_items	socket.c	/^static void conn_release_items(conn *c)$/;"	f	file:
+conn_set_state	socket.c	/^static void conn_set_state(conn *c, int state)$/;"	f	file:
+conn_shrink	socket.c	/^static void conn_shrink(conn *c)$/;"	f	file:
+conn_states	common.h	/^enum conn_states {$/;"	g
+conn_swallow	common.h	/^    conn_swallow,    \/**< swallowing unnecessary bytes w\/o storing *\/$/;"	e	enum:conn_states
+conn_waiting	common.h	/^    conn_waiting,    \/**< waiting for a readable socket *\/$/;"	e	enum:conn_states
+conn_write	common.h	/^    conn_write,      \/**< writing out a simple response *\/$/;"	e	enum:conn_states
+conn_yields	common.h	/^    uint64_t          conn_yields; \/* # of yields for connections (-R option)*\/$/;"	m	struct:thread_stats
+conns	socket.c	/^conn **conns;$/;"	v
+cq_init	thread.c	/^static void cq_init(CQ *cq) $/;"	f	file:
+cq_pop	thread.c	/^static CQ_ITEM *cq_pop(CQ *cq) $/;"	f	file:
+cq_push	thread.c	/^static void cq_push(CQ *cq, CQ_ITEM *item) $/;"	f	file:
+cqi_free	thread.c	/^static void cqi_free(CQ_ITEM *item) $/;"	f	file:
+cqi_freelist	thread.c	/^static CQ_ITEM *cqi_freelist;$/;"	v	file:
+cqi_freelist_lock	thread.c	/^static pthread_mutex_t cqi_freelist_lock;$/;"	v	file:
+cqi_new	thread.c	/^static CQ_ITEM *cqi_new(void)$/;"	f	file:
+create_worker	thread.c	/^static void create_worker(void *(*func)(void *), void *arg) $/;"	f	file:
+data	common.h	/^    } data[];$/;"	m	struct:_stritem	typeref:union:_stritem::__anon1
+datatype	common.h	/^        uint8_t datatype;$/;"	m	struct:__anon2::__anon3
+decr_misses	common.h	/^    uint64_t          decr_misses;$/;"	m	struct:thread_stats
+delete_misses	common.h	/^    uint64_t          delete_misses;$/;"	m	struct:thread_stats
+dispatch_conn_new	thread.c	/^void dispatch_conn_new(int sfd, int init_state, int event_flags, int read_buffer_size)$/;"	f
+dispatcher_thread	thread.c	/^static LIBEVENT_DISPATCHER_THREAD dispatcher_thread;$/;"	v	file:
+do_item_remove	thread.c	/^void do_item_remove(item *it) {$/;"	f
+drive_machine	socket.c	/^static void drive_machine(conn *c)$/;"	f	file:
+end	common.h	/^        char end;$/;"	m	union:_stritem::__anon1
+ensure_iov_space	socket.c	/^static int ensure_iov_space(conn *c)$/;"	f	file:
+ev_flags	common.h	/^    short  ev_flags;$/;"	m	struct:conn
+event	common.h	/^    struct event event;$/;"	m	struct:conn	typeref:struct:conn::event
+event_flags	common.h	/^    int               event_flags;$/;"	m	struct:conn_queue_item
+event_handler	socket.c	/^void event_handler(const int fd, const short which, void *arg)$/;"	f
+exptime	common.h	/^    rel_time_t      exptime;    \/* expire time *\/$/;"	m	struct:_stritem
+extlen	common.h	/^        uint8_t extlen;$/;"	m	struct:__anon2::__anon3
+flush_cmds	common.h	/^    uint64_t          flush_cmds;$/;"	m	struct:thread_stats
+get_cmds	common.h	/^    uint64_t          get_cmds;$/;"	m	struct:thread_stats
+get_misses	common.h	/^    uint64_t          get_misses;$/;"	m	struct:thread_stats
+h_next	common.h	/^    struct _stritem *h_next;    \/* hash chain next *\/$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
+hashmask	thread.c	26;"	d	file:
+hashsize	thread.c	25;"	d	file:
+hdrsize	common.h	/^    int    hdrsize;   \/* number of headers' worth of space is allocated *\/$/;"	m	struct:conn
+head	common.h	/^    CQ_ITEM *head;$/;"	m	struct:conn_queue
+icurr	common.h	/^    item   **icurr;$/;"	m	struct:conn
+ileft	common.h	/^    int    ileft;$/;"	m	struct:conn
+ilist	common.h	/^    item   **ilist;   \/* list of items to write out *\/$/;"	m	struct:conn
+incr_misses	common.h	/^    uint64_t          incr_misses;$/;"	m	struct:thread_stats
+init_cond	thread.c	/^static pthread_cond_t init_cond;$/;"	v	file:
+init_count	thread.c	/^static int init_count = 0;$/;"	v	file:
+init_lock	thread.c	/^static pthread_mutex_t init_lock;$/;"	v	file:
+init_state	common.h	/^    enum conn_states  init_state;$/;"	m	struct:conn_queue_item	typeref:enum:conn_queue_item::conn_states
+iov	common.h	/^    struct iovec *iov;$/;"	m	struct:conn	typeref:struct:conn::iovec
+iovsize	common.h	/^    int    iovsize;   \/* number of elements allocated in iov[] *\/$/;"	m	struct:conn
+iovused	common.h	/^    int    iovused;   \/* number of elements used in iov[] *\/$/;"	m	struct:conn
+isize	common.h	/^    int    isize;$/;"	m	struct:conn
+it_flags	common.h	/^    uint8_t         it_flags;   \/* ITEM_* above *\/$/;"	m	struct:_stritem
+item	common.h	/^    void   *item;     \/* for commands set\/add\/replace  *\/$/;"	m	struct:conn
+item	common.h	/^} item;$/;"	t	typeref:struct:_stritem
+item_lock_count	thread.c	/^static uint32_t item_lock_count;$/;"	v	file:
+item_lock_hashpower	thread.c	/^unsigned int item_lock_hashpower;$/;"	v
+item_locks	thread.c	/^static pthread_mutex_t *item_locks;$/;"	v	file:
+item_remove	thread.c	/^void item_remove(item *item) {$/;"	f
+keylen	common.h	/^        uint16_t keylen;$/;"	m	struct:__anon2::__anon3
+keylen	common.h	/^    int keylen;$/;"	m	struct:conn
+last_cmd_time	common.h	/^    rel_time_t last_cmd_time;$/;"	m	struct:conn
+last_thread	thread.c	/^static int last_thread = -1;$/;"	v	file:
+lock	common.h	/^    pthread_mutex_t lock;$/;"	m	struct:conn_queue
+magic	common.h	/^        uint8_t magic;$/;"	m	struct:__anon2::__anon3
+main	main.c	/^int main(void)$/;"	f
+main_base	main.c	/^static struct event_base *main_base;$/;"	v	typeref:struct:event_base	file:
+memcached_thread_init	thread.c	/^void memcached_thread_init(int nthreads, struct event_base *main_base)$/;"	f
+msgbytes	common.h	/^    int    msgbytes;  \/* number of bytes in current msg *\/$/;"	m	struct:conn
+msgcurr	common.h	/^    int    msgcurr;   \/* element in msglist[] being transmitted now *\/$/;"	m	struct:conn
+msglist	common.h	/^    struct msghdr *msglist;$/;"	m	struct:conn	typeref:struct:conn::msghdr
+msgsize	common.h	/^    int    msgsize;   \/* number of elements allocated in msglist[] *\/$/;"	m	struct:conn
+msgused	common.h	/^    int    msgused;   \/* number of elements used in msglist[] *\/$/;"	m	struct:conn
+mutex	common.h	/^    pthread_mutex_t   mutex;$/;"	m	struct:thread_stats
+nbytes	common.h	/^    int             nbytes;     \/* size of data *\/$/;"	m	struct:_stritem
+new_conn_queue	common.h	/^    struct conn_queue *new_conn_queue; \/* queue of new connections to handle *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::conn_queue
+next	common.h	/^    CQ_ITEM          *next;$/;"	m	struct:conn_queue_item
+next	common.h	/^    conn   *next;     \/* Used for generating a list of conn structures *\/$/;"	m	struct:conn
+next	common.h	/^    struct _stritem *next;$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
+nkey	common.h	/^    uint8_t         nkey;       \/* key length, w\/terminating null and padding *\/$/;"	m	struct:_stritem
+noreply	common.h	/^    bool   noreply;   \/* True if the reply should not be sent. *\/$/;"	m	struct:conn
+notify_event	common.h	/^    struct event notify_event;  \/* listen event for notify pipe *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::event
+notify_receive_fd	common.h	/^    int notify_receive_fd;      \/* receiving end of notify pipe *\/$/;"	m	struct:__anon4
+notify_send_fd	common.h	/^    int notify_send_fd;         \/* sending end of notify pipe *\/$/;"	m	struct:__anon4
+nsuffix	common.h	/^    uint8_t         nsuffix;    \/* length of flags-and-length string *\/$/;"	m	struct:_stritem
+offset	common.h	/^        size_t offset;$/;"	m	struct:conn::__anon6
+opaque	common.h	/^        uint32_t opaque;$/;"	m	struct:__anon2::__anon3
+opaque	common.h	/^    int opaque;$/;"	m	struct:conn
+opcode	common.h	/^        uint8_t opcode;$/;"	m	struct:__anon2::__anon3
+prev	common.h	/^    struct _stritem *prev;$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
+protocol_binary_request_header	common.h	/^}protocol_binary_request_header;$/;"	t	typeref:union:__anon2
+rbuf	common.h	/^    char   *rbuf;   \/** buffer to read commands into *\/$/;"	m	struct:conn
+rbytes	common.h	/^    int    rbytes;  \/** how much data, starting from rcur, do we have unparsed *\/$/;"	m	struct:conn
+rcurr	common.h	/^    char   *rcurr;  \/** but if we parsed some already, this is where we stopped *\/$/;"	m	struct:conn
+read_buffer_size	common.h	/^    int               read_buffer_size;$/;"	m	struct:conn_queue_item
+read_network	socket.c	/^static int read_network(conn *c)$/;"	f	file:
+refcount	common.h	/^    unsigned short  refcount;$/;"	m	struct:_stritem
+refcount_decr	thread.c	/^unsigned short refcount_decr(unsigned short *refcount) {$/;"	f
+register_thread_initialized	thread.c	/^static void register_thread_initialized(void)$/;"	f	file:
+rel_time_t	common.h	/^typedef unsigned int rel_time_t;$/;"	t
+reqs_per_event	socket.c	/^static int reqs_per_event = 20;\/\/add by 20151126$/;"	v	file:
+request	common.h	/^    } request;$/;"	m	union:__anon2	typeref:struct:__anon2::__anon3
+request_addr_size	common.h	/^    socklen_t request_addr_size;$/;"	m	struct:conn
+reserved	common.h	/^        uint16_t reserved;$/;"	m	struct:__anon2::__anon3
+reset_cmd_handler	socket.c	/^static void reset_cmd_handler(conn *c)$/;"	f	file:
+ritem	common.h	/^    char   *ritem;  \/** when we read in an item's value, it goes here *\/$/;"	m	struct:conn
+rlbytes	common.h	/^    int    rlbytes;$/;"	m	struct:conn
+rsize	common.h	/^    int    rsize;   \/** total allocated size of rbuf *\/$/;"	m	struct:conn
+sbytes	common.h	/^    int    sbytes;    \/* how many bytes to swallow *\/$/;"	m	struct:conn
+server_socket	socket.c	/^int server_socket(int port, struct event_base *main_base)$/;"	f
+setup_thread	thread.c	/^static void setup_thread(LIBEVENT_THREAD *me)$/;"	f	file:
+sfd	common.h	/^    int               sfd;$/;"	m	struct:conn_queue_item
+sfd	common.h	/^    int    sfd;$/;"	m	struct:conn
+size	common.h	/^        size_t size;$/;"	m	struct:conn::__anon6
+slabs_clsid	common.h	/^    uint8_t         slabs_clsid;\/* which slab class we're in *\/$/;"	m	struct:_stritem
+state	common.h	/^    enum conn_states  state;$/;"	m	struct:conn	typeref:enum:conn::conn_states
+stats	common.h	/^    struct thread_stats stats;  \/* Stats generated by this thread *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::thread_stats
+stats	common.h	/^    } stats;$/;"	m	struct:conn	typeref:struct:conn::__anon6
+stats_lock	socket.c	/^static pthread_mutex_t stats_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
+substate	common.h	/^    enum bin_substates substate;$/;"	m	struct:conn	typeref:enum:conn::bin_substates
+suffixcurr	common.h	/^    char   **suffixcurr;$/;"	m	struct:conn
+suffixleft	common.h	/^    int    suffixleft;$/;"	m	struct:conn
+suffixlist	common.h	/^    char   **suffixlist;$/;"	m	struct:conn
+suffixsize	common.h	/^    int    suffixsize;$/;"	m	struct:conn
+tail	common.h	/^    CQ_ITEM *tail;$/;"	m	struct:conn_queue
+thread	common.h	/^    LIBEVENT_THREAD *thread; \/* Pointer to the thread object serving this connection *\/$/;"	m	struct:conn
+thread_id	common.h	/^	pthread_t thread_id;$/;"	m	struct:__anon5
+thread_id	common.h	/^    pthread_t thread_id;        \/* unique ID of this thread *\/$/;"	m	struct:__anon4
+thread_libevent_process	thread.c	/^static void thread_libevent_process(int fd, short which, void *arg)$/;"	f	file:
+thread_stats	common.h	/^struct thread_stats {$/;"	s
+threads	thread.c	/^static LIBEVENT_THREAD *threads;$/;"	v	file:
+time	common.h	/^    rel_time_t      time;       \/* least recent access *\/$/;"	m	struct:_stritem
+touch_cmds	common.h	/^    uint64_t          touch_cmds;$/;"	m	struct:thread_stats
+touch_misses	common.h	/^    uint64_t          touch_misses;$/;"	m	struct:thread_stats
+transmit	socket.c	/^static int transmit(conn *c)$/;"	f	file:
+transmit_result	socket.c	/^enum transmit_result {$/;"	g	file:
+try_read_result	common.h	/^enum try_read_result {$/;"	g
+update_event	socket.c	/^static int update_event(conn *c, const int new_flags)$/;"	f	file:
+wait_for_thread_registration	thread.c	/^static void wait_for_thread_registration(int nthreads)$/;"	f	file:
+wbuf	common.h	/^    char   *wbuf;$/;"	m	struct:conn
+wbytes	common.h	/^    int    wbytes;$/;"	m	struct:conn
+wcurr	common.h	/^    char   *wcurr;$/;"	m	struct:conn
+which	common.h	/^    short  which;   \/** which events were just triggered *\/$/;"	m	struct:conn
+worker_libevent	thread.c	/^static void *worker_libevent(void *arg) $/;"	f	file:
+write_and_free	common.h	/^    void   *write_and_free; \/** free this memory after finishing writing *\/$/;"	m	struct:conn
+write_and_go	common.h	/^    enum conn_states  write_and_go;$/;"	m	struct:conn	typeref:enum:conn::conn_states
+wsize	common.h	/^    int    wsize;$/;"	m	struct:conn
