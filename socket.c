@@ -439,7 +439,6 @@ static void drive_machine(conn *c)
 				break;
 			case conn_read:
 				res = read_network(c);	
-				printf("this come from %s:%d, the read_network return %d\n", __func__, __LINE__, res);
 				switch(res)
 				{
 					case READ_NO_DATA_RECEIVED:
@@ -466,7 +465,6 @@ static void drive_machine(conn *c)
 				conn_set_state(c, conn_mwrite);
 				break;
 			case conn_nread:
-				printf("this come from %s:%s->%d, conn_nread\n", __FILE__, __func__, __LINE__);
 				if(c->rlbytes == 0)
 				{
 					break;
@@ -532,7 +530,6 @@ static void drive_machine(conn *c)
 				* assemble it into a msgbuf list (this will be a single-entry
 				* list for TCP or a two-entry list for UDP).
 				*/
-				printf("this come from %s:%s->%d, conn_write\n", __FILE__, __func__, __LINE__);
 				if(c->iovused == 0)
 				{
 					if(add_iov(c, c->wcurr, c->wbytes) != 0)
