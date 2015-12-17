@@ -19,6 +19,7 @@ static void conn_close(conn *c)
 	assert(c != NULL);
 
 	event_del(&c->event);
+	close(c->sfd);//add by 20151217
 	
 	return;
 }
