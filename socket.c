@@ -463,6 +463,8 @@ static void drive_machine(conn *c)
 				c->rbytes = 0;
 				if(!memcmp(c->rcurr, "Welcome to New World", 20))
 					sleep(5);//add by 20151211
+
+				memset(c->rbuf, 0, sizeof(c->rbuf));
 				conn_set_state(c, conn_mwrite);
 				break;
 			case conn_nread:
