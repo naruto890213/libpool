@@ -150,10 +150,12 @@ static int read_network(conn *c)
 		}
 
 		int avail = c->rsize - c->rbytes;
+		printf("This come from read:%s, c->rbytes is %d\n", c->rbuf, c->rbytes);
 		res = read(c->sfd, c->rbuf + c->rbytes, avail);
 		if(res > 0)
 		{
-			printf("the avail is %d, the res is %d\n", avail, res);
+			//printf("the avail is %d, the res is %d\n", avail, res);
+			printf("This come from read:%s, c->rbytes is %d\n", c->rbuf, res);
 			pthread_mutex_lock(&c->thread->stats.mutex);
 			c->thread->stats.bytes_read += res;
 			pthread_mutex_unlock(&c->thread->stats.mutex);
@@ -271,7 +273,7 @@ static void reset_cmd_handler(conn *c)
 	}
 
 	conn_shrink(c);
-	printf("%s:%s->%d c->rbytes is %d\n", __FILE__, __func__, __LINE__, c->rbytes);
+	//printf("%s:%s->%d c->rbytes is %d\n", __FILE__, __func__, __LINE__, c->rbytes);
 	if(c->rbytes > 0)
 	{
 		conn_set_state(c, conn_parse_cmd);
@@ -291,7 +293,7 @@ static int transmit(conn *c)
 		c->msgcurr++;
 	}
 
-	printf("the c->msgcurr is %d, the c->msgused is %d\n", c->msgcurr, c->msgused);
+	//printf("the c->msgcurr is %d, the c->msgused is %d\n", c->msgcurr, c->msgused);
 	if(c->msgcurr < c->msgused)
 	{
 		ssize_t res;
@@ -400,11 +402,9 @@ static void drive_machine(conn *c)
 					break;
 				}
 				dispatch_conn_new(sfd, conn_new_cmd, EV_READ | EV_PERSIST, DATA_BUFFER_SIZE);
-				printf("this come from %s:%s->%d, conn_listening\n", __FILE__, __func__, __LINE__);
 				stop = 1;
 				break;
 			case conn_new_cmd:
-				printf("this come from %s:%s->%d, the nreas is %d conn_new_cmd\n", __FILE__, __func__, __LINE__, nreas);
 				--nreas;
 				if(nreas >= 0)
 				{
@@ -428,7 +428,6 @@ static void drive_machine(conn *c)
 				}
 				break;
 			case conn_waiting:
-				printf("this come from %s:%s->%d, conn_waiting\n", __FILE__, __func__, __LINE__);
 				if(!update_event(c, EV_READ | EV_PERSIST))
 				{
 					conn_set_state(c, conn_closing);
@@ -464,7 +463,6 @@ static void drive_machine(conn *c)
 				if(!memcmp(c->rcurr, "Welcome to New World", 20))
 					sleep(5);//add by 20151211
 
-				memset(c->rbuf, 0, sizeof(c->rbuf));
 				conn_set_state(c, conn_mwrite);
 				break;
 			case conn_nread:
@@ -543,10 +541,10 @@ static void drive_machine(conn *c)
 					}
 				}
 			case conn_mwrite:
-				printf("this come from %s:%s->%d c->rbytes is %d conn_mwrite\n", __FILE__, __func__, __LINE__, c->rbytes);
 				switch(transmit(c))
 				{
 					case TRANSMIT_COMPLETE:
+						memset(c->rbuf, 0, c->rsize);//add by 20151221
 						if (c->state == conn_mwrite) 
 						{
 							conn_release_items(c);
@@ -585,7 +583,6 @@ static void drive_machine(conn *c)
 				break;
 		}
 	}
-	printf("this come from %s:%s->%d, drive_machine existing\n", __FILE__, __func__, __LINE__);
 
 	return;
 }
@@ -605,7 +602,6 @@ void event_handler(const int fd, const short which, void *arg)
 		return;
 	}
 
-	printf("this come from %s, the fd is %d, the c->sfd is %d, the c->state is %d\n", __func__, fd, c->sfd, c->state);
 	drive_machine(c);
 	return;
 }

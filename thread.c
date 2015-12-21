@@ -187,7 +187,6 @@ void dispatch_conn_new(int sfd, int init_state, int event_flags, int read_buffer
 	
 	cq_push(thread->new_conn_queue, item);	
 	buf[0] = 'c';
-	printf("this come from  write %s->%d\n", __func__, __LINE__);
 	if(write(thread->notify_send_fd, buf, 1) != 1)
 	{
 		perror("Writing to thread notify pipe");
@@ -215,7 +214,6 @@ static void thread_libevent_process(int fd, short which, void *arg)
 
 	if(NULL != item)
 	{
-		printf("the %s->sfd is %d, the init_state is %d\n", __func__, item->sfd, item->init_state);
 		conn *c = conn_new(item->sfd, item->init_state, item->event_flags, item->read_buffer_size, me->base);
 		if(c == NULL)
 		{
