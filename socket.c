@@ -150,12 +150,11 @@ static int read_network(conn *c)
 		}
 
 		int avail = c->rsize - c->rbytes;
-		printf("This come from read:%s, c->rbytes is %d\n", c->rbuf, c->rbytes);
 		res = read(c->sfd, c->rbuf + c->rbytes, avail);
 		if(res > 0)
 		{
 			//printf("the avail is %d, the res is %d\n", avail, res);
-			printf("This come from read:%s, c->rbytes is %d\n", c->rbuf, res);
+			//printf("This come from read:%s, c->rbytes is %d\n", c->rbuf, res);
 			pthread_mutex_lock(&c->thread->stats.mutex);
 			c->thread->stats.bytes_read += res;
 			pthread_mutex_unlock(&c->thread->stats.mutex);
